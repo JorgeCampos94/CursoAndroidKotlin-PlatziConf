@@ -1,2 +1,3 @@
 # CursoAndroidKotlin-PlatziConf
-Desarrollar App. Platzi Conf - Del curso de desarrollo de aplicaciones Android en kotlin. Que imparte platzi
+
+Desarrollar la aplicación del curso de platzi "Curso de Kotlin para Android" en el cual se desarrollara una aplicacion en lenguaje kotlin.
