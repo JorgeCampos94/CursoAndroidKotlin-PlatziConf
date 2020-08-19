@@ -6,21 +6,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ui.activities.MainActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <Toolbar
-            android:id="@+id/toolbar_main"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <ImageView
+            <Toolbar
+                android:id="@+id/toolbar_main"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dimen_size_activity_32dp"
-                android:contentDescription="@string/app_name"
-                android:src="@drawable/logo_platzi_conf"/>
-        </Toolbar>
-    </com.google.android.material.appbar.AppBarLayout>
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_size_activity_32dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/logo_platzi_conf"/>
+            </Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
 
+        <fragment
+            android:id="@+id/id_fragment_card_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:name="com.example.platzi.ui.fragments.homeFragment.HomeFragment" />
+    </LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

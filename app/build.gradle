@@ -33,7 +33,11 @@ dependencies {
 
     //Material design dependencies
     implementation 'com.google.android.material:material:1.2.0'
-    
+
+    //Glide dependencies
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+
     //Test dependencies
     testImplementation 'junit:junit:4.13'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
