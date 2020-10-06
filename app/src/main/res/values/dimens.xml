@@ -27,6 +27,7 @@
     <dimen name="dimen_size_activity_136dp">136dp</dimen>
     <dimen name="dimen_size_activity_144dp">144dp</dimen>
     <dimen name="dimen_size_activity_152dp">152dp</dimen>
+    <dimen name="dimen_size_activity_200dp">200dp</dimen>
     <!--Size Text dimens-->
     <dimen name="dimen_size_text_2sp">2sp</dimen>
     <dimen name="dimen_size_text_4sp">4sp</dimen>
