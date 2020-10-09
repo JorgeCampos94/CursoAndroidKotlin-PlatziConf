@@ -19,4 +19,9 @@
         \u0009 &#8226; Fecha: Sábado 3 de Agosto de 2019.\n
         \u0009 &#8226; Lugar: Centro Cultural Roberto Cantoral.\n
         \u0009 &#8226; Dirección: Puente Xoco s/n, Xoco, 03330 Ciudad de México, CDMX.</string>
+
+    <string name="btn_navigation_home">Inicio</string>
+    <string name="btn_navigation_schedule">Cronograma</string>
+    <string name="btn_navigation_speakers">Expositores</string>
+    <string name="btn_navigation_map">Mapa</string>
 </resources>

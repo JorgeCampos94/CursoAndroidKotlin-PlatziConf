@@ -12,13 +12,15 @@
     <LinearLayout
         android:id="@+id/ll_body_time_conference_item_schedule"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
         <TextView
             android:id="@+id/tv_time_conference_item_schedule"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAlignment="textEnd"
-            android:textSize="@dimen/dimen_size_text_16sp"
+            android:textSize="@dimen/dimen_size_text_24sp"
+            android:textColor="@color/colorAccent"
             style="@style/TextAppearance.AppCompat.Title"
             android:lineSpacingExtra="6sp"
             android:textStyle="bold"
@@ -60,7 +62,7 @@
             android:textSize="@dimen/dimen_size_text_16sp"
             android:paddingHorizontal="@dimen/dimen_size_activity_8dp"
             android:textColor="@color/color_white"
-            android:background="@android:color/holo_blue_dark"
+            android:background="@drawable/shape_blue_topic_4dp"
             android:textStyle="bold"
             tools:text="Design"/>
     </LinearLayout>
