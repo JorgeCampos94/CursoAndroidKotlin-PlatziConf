@@ -33,6 +33,15 @@
             android:layout_height="match_parent"
             app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
+            <fragment
+                android:id="@+id/fragment_main_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:name="androidx.navigation.fragment.NavHostFragment"
+                android:layout_above="@id/btn_navigation"
+                app:navGraph="@navigation/nav_graph"
+                app:defaultNavHost="true"/>
+
             <com.google.android.material.bottomnavigation.BottomNavigationView
                 android:id="@+id/btn_navigation"
                 android:layout_width="match_parent"
@@ -44,11 +53,5 @@
                 app:itemIconTint="@drawable/btn_navigation_select_color"
                 app:menu="@menu/btn_navigation_view_menu"/>
         </RelativeLayout>
-
-        <fragment
-            android:id="@+id/id_fragment_card_description"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:name="com.example.platzi.ui.fragments.homeFragment.HomeFragment" />
     </LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
