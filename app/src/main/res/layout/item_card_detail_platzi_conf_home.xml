@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="@dimen/dimen_size_activity_8dp"
+    android:layout_marginHorizontal="@dimen/dimen_size_activity_16dp"
+    app:cardCornerRadius="@dimen/dimen_size_activity_4dp"
+    app:cardElevation="@dimen/dimen_size_activity_8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_border_dark_grey_4dp"
+        android:paddingHorizontal="@dimen/dimen_size_activity_4dp"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_size_activity_8dp"
+            android:layout_margin="@dimen/dimen_size_activity_4dp"
+            app:cardCornerRadius="@dimen/dimen_size_activity_8dp"
+            app:cardElevation="@dimen/dimen_size_activity_2dp">
+            <ImageView
+                android:id="@+id/iv_banner_card_home"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_size_activity_152dp"
+                android:contentDescription="@string/app_name"
+                tools:src="@drawable/banner_platzi_conf_1"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_size_activity_1dp"
+            android:background="@color/colorPrimaryDark" />
+        <TextView
+            android:id="@+id/tv_title_card_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/dimen_size_activity_12dp"
+            android:paddingHorizontal="@dimen/dimen_size_activity_4dp"
+            tools:text="@string/label_question_whats_is_it_platziConf"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/dimen_size_text_20sp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_size_activity_1dp"
+            android:background="@color/colorPrimaryDark"/>
+        <TextView
+            android:id="@+id/tv_subtitle_card_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_size_activity_12dp"
+            android:layout_marginBottom="@dimen/dimen_size_activity_20dp"
+            android:paddingHorizontal="@dimen/dimen_size_activity_4dp"
+            tools:text="@string/label_response_whats_is_it_platziConf"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/dimen_size_text_16sp"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

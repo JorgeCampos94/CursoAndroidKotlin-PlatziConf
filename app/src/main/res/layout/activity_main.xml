@@ -6,21 +6,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ui.activities.MainActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <Toolbar
-            android:id="@+id/toolbar_main"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <ImageView
+            <Toolbar
+                android:id="@+id/toolbar_main"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dimen_size_activity_32dp"
-                android:contentDescription="@string/app_name"
-                android:src="@drawable/logo_platzi_conf"/>
-        </Toolbar>
-    </com.google.android.material.appbar.AppBarLayout>
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_size_activity_32dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/logo_platzi_conf"/>
+            </Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+            <fragment
+                android:id="@+id/fragment_main_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:name="androidx.navigation.fragment.NavHostFragment"
+                android:layout_above="@id/btn_navigation"
+                app:navGraph="@navigation/nav_graph"
+                app:defaultNavHost="true"/>
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/btn_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:background="@color/color_white"
+                app:itemIconTint="@drawable/btn_navigation_select_color"
+                app:menu="@menu/btn_navigation_view_menu"/>
+        </RelativeLayout>
+    </LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
