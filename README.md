@@ -25,5 +25,21 @@ Este app se construyó usando [CursoAndroidKotlin](https://platzi.com/clases/kot
   9. Tipos de recursos y buenas pràcticas en interfaces de usuario.
   
 *******Interfaces de usuario y personalización.
-
 --
+
+*******Android Jetpack
+--
+
+*******Android y Kotlin
+--
+
+*******Biblioteca de Google Maps
+--
+
+*******Detalles de visualización de la app
+--
+
+
+
+
+
