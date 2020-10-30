@@ -41,6 +41,7 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
     //firebase dependencies
     implementation platform('com.google.firebase:firebase-bom:25.12.0')
+    implementation 'com.google.firebase:firebase-firestore-ktx:21.7.1'
     implementation 'com.google.firebase:firebase-analytics'
     //Test dependencies
     testImplementation 'junit:junit:4.13'
