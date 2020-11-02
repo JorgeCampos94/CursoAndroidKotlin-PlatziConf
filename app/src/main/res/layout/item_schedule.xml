@@ -24,7 +24,18 @@
             style="@style/TextAppearance.AppCompat.Title"
             android:lineSpacingExtra="6sp"
             android:textStyle="bold"
-            tools:text="09:00 \n A.M."/>
+            tools:text="09:00"/>
+        <TextView
+            android:id="@+id/tv_day_conference_item_schedule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="textEnd"
+            android:textSize="@dimen/dimen_size_text_24sp"
+            android:textColor="@color/colorAccent"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:lineSpacingExtra="6sp"
+            android:textStyle="bold"
+            tools:text="A.M."/>
     </LinearLayout>
 
     <LinearLayout
@@ -44,7 +55,6 @@
             style="@style/TextAppearance.AppCompat.Title"
             android:textStyle="bold"
             tools:text="Titulo Conferencia"/>
-
         <TextView
             android:id="@+id/tv_name_expositor_item_schedule"
             android:layout_width="wrap_content"
@@ -54,8 +64,8 @@
             android:paddingBottom="@dimen/dimen_size_activity_4dp"
             android:textStyle="bold"
             tools:text="Nombre del expositor"/>
-
         <TextView
+            android:id="@+id/tv_tag_expositor_item_schedule"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAlignment="textStart"

@@ -1,4 +1,4 @@
-package com.example.platzi.ui.fragments.homeFragment
+package com.example.platzi.view.ui.fragments.homeFragment
 
 import android.os.Bundle
 import android.util.Log
@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.platzi.R
-import com.example.platzi.adapters.CardsHomeAdapter
+import com.example.platzi.view.adapters.CardsHomeAdapter
 import com.example.platzi.models.CardDescriptionHome
 import kotlinx.android.synthetic.main.fragment_home.view.*
 

@@ -1,4 +1,4 @@
-package com.example.platzi.adapters
+package com.example.platzi.view.adapters
 
 import android.content.Context
 import android.view.LayoutInflater

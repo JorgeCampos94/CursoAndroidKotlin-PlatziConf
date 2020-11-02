@@ -1,4 +1,4 @@
-package com.example.platzi.ui.fragments.locationFragment
+package com.example.platzi.view.ui.fragments.locationFragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
