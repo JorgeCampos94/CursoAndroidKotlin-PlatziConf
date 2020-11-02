@@ -1,4 +1,4 @@
-package com.example.platzi.interfaces
+package com.example.platzi.network.interfaces
 
 import java.lang.Exception
 

@@ -1,6 +1,6 @@
 package com.example.platzi.network
 
-import com.example.platzi.interfaces.Callback
+import com.example.platzi.network.interfaces.Callback
 import com.example.platzi.models.Conferences
 import com.example.platzi.models.Speakers
 import com.example.platzi.utilitys.Constants
