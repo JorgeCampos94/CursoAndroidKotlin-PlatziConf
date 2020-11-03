@@ -18,6 +18,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.LinearSmoothScroller
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 
 fun View.setVisibleOrGone(value:Boolean){
     this.visibility = if(value) View.VISIBLE else View.GONE
@@ -26,16 +27,18 @@ fun View.setVisibleOrGone(value:Boolean){
 fun ImageView.setGlide(context: Context, value: String, placeHolder: Int){
     Glide.with(context)
         .load(value)
+        .centerCrop()
+        .apply(RequestOptions.centerCropTransform())
         .placeholder(placeHolder)
         .error(placeHolder)
         .into(this)
 }
 
-fun ImageView.setGlide(context: Context, value: Int, placeHolder: Int){
+fun ImageView.setGlide(context: Context, value: Int?, placeHolder: Int){
     Glide.with(context)
         .load(value)
-        .placeholder(placeHolder)
         .centerCrop()
+        .placeholder(placeHolder)
         .error(placeHolder)
         .into(this)
 }

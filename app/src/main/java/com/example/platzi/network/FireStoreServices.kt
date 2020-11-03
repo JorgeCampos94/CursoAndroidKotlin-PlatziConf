@@ -3,7 +3,7 @@ package com.example.platzi.network
 import com.example.platzi.network.interfaces.Callback
 import com.example.platzi.models.Conferences
 import com.example.platzi.models.Speakers
-import com.example.platzi.utilitys.Constants
+import com.example.platzi.utility.Constants
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.FirebaseFirestoreSettings
 

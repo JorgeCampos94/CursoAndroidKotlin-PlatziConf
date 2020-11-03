@@ -42,7 +42,7 @@ class CardsHomeAdapter(private val mContext: Context) : RecyclerView.Adapter<Car
         fun bind(cardDescription: CardDescriptionHome, context: Context){
             titleCard.text = cardDescription.titleDescription as String
             subtitleCard.text = cardDescription.bodyDescription as String
-            imgCard.setGlide(context ,cardDescription.imgDescription as Int,R.drawable.img_place_holder)
+            imgCard.setGlide(context ,cardDescription.imgDescription,R.drawable.img_place_holder)
         }
     }
 }
