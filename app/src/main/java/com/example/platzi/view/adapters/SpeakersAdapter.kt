@@ -16,7 +16,7 @@ class SpeakersAdapter(private val mContext : Context, val speakerListener : Spea
 
     private val listSpeakers = ArrayList<Speakers>()
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_card_speakers,parent))
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_card_speakers, parent, false))
 
     override fun getItemCount() = listSpeakers.size
 
@@ -32,13 +32,13 @@ class SpeakersAdapter(private val mContext : Context, val speakerListener : Spea
     }
 
     class ViewHolder(itemView : View):RecyclerView.ViewHolder(itemView){
-        private val imgSpeakerProfile : ImageView = itemView.findViewById(R.id.iv_banner_card_home)
+        private val imgSpeakerProfile : ImageView = itemView.findViewById(R.id.iv_profile_item_speaker)
         private val tvSpeakerName : TextView = itemView.findViewById(R.id.tv_name_item_speaker)
         private val tvSpeakerDescriptionJob : TextView = itemView.findViewById(R.id.tv_job_description_item_speaker)
 
         fun bind(speakerItem : Speakers , mContext : Context, position : Int , speakerListener : SpeakerListener){
 
-            imgSpeakerProfile.setGlide(mContext,speakerItem.image, R.mipmap.ic_launcher)
+            imgSpeakerProfile.setGlide(mContext,speakerItem.image.toString(), R.mipmap.ic_launcher)
             tvSpeakerName.text = speakerItem.name
             tvSpeakerDescriptionJob.text = speakerItem.workPlace
 

@@ -4,9 +4,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_border_dark_grey_4dp"
+    android:paddingHorizontal="@dimen/dimen_size_activity_8dp"
+    android:paddingVertical="@dimen/dimen_size_activity_12dp"
+    android:layout_marginVertical="@dimen/dimen_size_activity_4dp"
     android:layout_marginHorizontal="@dimen/dimen_size_activity_16dp"
-    android:paddingTop="@dimen/dimen_size_activity_16dp"
     android:orientation="horizontal">
 
     <LinearLayout
@@ -27,11 +30,10 @@
             tools:text="09:00"/>
         <TextView
             android:id="@+id/tv_day_conference_item_schedule"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="textEnd"
-            android:textSize="@dimen/dimen_size_text_24sp"
-            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/dimen_size_text_14sp"
             style="@style/TextAppearance.AppCompat.Title"
             android:lineSpacingExtra="6sp"
             android:textStyle="bold"

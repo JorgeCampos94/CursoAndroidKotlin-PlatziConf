@@ -24,13 +24,13 @@
             android:layout_marginBottom="@dimen/dimen_size_activity_8dp"
             android:layout_margin="@dimen/dimen_size_activity_4dp"
             android:layout_gravity="center"
-            app:cardCornerRadius="@dimen/dimen_size_activity_8dp"
             app:cardElevation="@dimen/dimen_size_activity_2dp">
 
             <ImageView
                 android:id="@+id/iv_profile_item_speaker"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dimen_size_activity_152dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dimen_size_activity_8dp"
                 android:scaleType="centerCrop"
                 android:contentDescription="@string/app_name"
                 tools:src="@mipmap/ic_launcher"/>

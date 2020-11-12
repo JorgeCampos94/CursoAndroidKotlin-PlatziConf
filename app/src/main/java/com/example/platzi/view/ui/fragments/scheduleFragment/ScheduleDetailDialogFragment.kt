@@ -1,60 +1,62 @@
 package com.example.platzi.view.ui.fragments.scheduleFragment
 
+import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
+import androidx.fragment.app.DialogFragment
 import com.example.platzi.R
+import com.example.platzi.models.Conferences
+import kotlinx.android.synthetic.main.fragment_schedule_detail_dialog.*
+import java.text.SimpleDateFormat
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+class ScheduleDetailDialogFragment : DialogFragment() {
 
-/**
- * A simple [Fragment] subclass.
- * Use the [ScheduleDetailDialogFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-class ScheduleDetailDialogFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    lateinit var conferences: Conferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+        setStyle(STYLE_NORMAL, R.style.FullScreenDialogStyle)
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_schedule_detail_dialog, container, false)
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ScheduleDetailDialogFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            ScheduleDetailDialogFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        conferences = arguments?.getSerializable("conference") as Conferences
+        setContentToolbar()
+        setBodyDialogConference()
+    }
+
+    override fun onStart() {
+        super.onStart()
+        dialog?.window?.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
+    }
+
+    private fun setContentToolbar() {
+        toolbar_conference.navigationIcon = view?.context?.let { ContextCompat.getDrawable(it, R.drawable.ic_close) }
+        toolbar_conference.setTitleTextColor(Color.WHITE)
+        toolbar_conference.setNavigationOnClickListener {
+            dismiss()
+        }
+
+        toolbar_conference.title = conferences.title
+    }
+
+    private fun setBodyDialogConference() {
+        tv_title_conference_schedule_detail_dialog.text = conferences.title
+        val pattern = "dd/MM/yyyy hh:mm a"
+        val simpleDateFormat = SimpleDateFormat(pattern)
+        val date = simpleDateFormat.format(conferences.dateTime)
+        tv_conference_hour_schedule_detail_dialog.text = date
+        tv_speaker_schedule_detail_dialog.text = conferences.speakers
+        tv_tag_schedule_detail_dialog.text = conferences.tag
+        tv_detail_conference_schedule_detail_dialog.text = conferences.description
     }
 }

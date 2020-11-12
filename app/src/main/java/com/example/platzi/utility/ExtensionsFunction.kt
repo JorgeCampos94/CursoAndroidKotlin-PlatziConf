@@ -28,7 +28,7 @@ fun ImageView.setGlide(context: Context, value: String, placeHolder: Int){
     Glide.with(context)
         .load(value)
         .centerCrop()
-        .apply(RequestOptions.centerCropTransform())
+        .apply(RequestOptions.circleCropTransform())
         .placeholder(placeHolder)
         .error(placeHolder)
         .into(this)

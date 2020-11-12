@@ -2,10 +2,13 @@ package com.example.platzi.view.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.navigation.Navigation
+import androidx.navigation.ui.NavigationUI
 import com.example.platzi.R
 import com.example.platzi.models.Conferences
 import com.example.platzi.models.Speakers
 import com.google.firebase.firestore.FirebaseFirestore
+import kotlinx.android.synthetic.main.activity_main.*
 import org.json.JSONArray
 import org.json.JSONObject
 import java.util.*
@@ -14,8 +17,15 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        //Change toolbar
+        setActionBar(findViewById(R.id.toolbar_main))
+        configNav()
 
         //createVariableJSON()
+    }
+
+    private fun configNav() {
+        NavigationUI.setupWithNavController(btn_navigation, Navigation.findNavController(this, R.id.fragment_main_content))
     }
 
     private fun createVariableJSON(){

@@ -13,7 +13,7 @@
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_homeFragment_to_scheduleFragment"
+            android:id="@+id/action_nav_home_fragment_to_nav_schedules_fragment"
             app:destination="@id/nav_schedules_fragment" />
     </fragment>
     <fragment
@@ -22,11 +22,11 @@
         android:label="fragment_schedule"
         tools:layout="@layout/fragment_schedule" >
         <action
-            android:id="@+id/action_scheduleFragment_to_speakersFragment"
-            app:destination="@id/nav_speakers_fragment" />
-        <action
             android:id="@+id/action_nav_schedules_fragment_to_schedules_detail_fragment_dialog"
             app:destination="@id/schedules_detail_fragment_dialog" />
+        <action
+            android:id="@+id/action_nav_schedules_fragment_to_nav_speakers_fragment"
+            app:destination="@id/nav_speakers_fragment" />
     </fragment>
 
     <dialog
@@ -40,11 +40,11 @@
         android:label="fragment_speakers"
         tools:layout="@layout/fragment_speakers" >
         <action
-            android:id="@+id/action_speakersFragment_to_ubicationFragment"
-            app:destination="@id/nav_location_fragment" />
-        <action
             android:id="@+id/action_nav_speakers_fragment_to_speakers_detail_fragment_dialog"
             app:destination="@id/speakers_detail_fragment_dialog" />
+        <action
+            android:id="@+id/action_nav_speakers_fragment_to_nav_location_fragment"
+            app:destination="@id/nav_location_fragment" />
     </fragment>
 
     <dialog

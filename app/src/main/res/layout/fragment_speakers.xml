@@ -13,10 +13,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/item_schedule"/>
+        tools:listitem="@layout/item_card_speakers"/>
 
     <RelativeLayout
-        android:id="@+id/rl_container_body_speakers"
+        android:id="@+id/rl_container_progress_bar_speakers"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <View
@@ -24,7 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/colorPrimary"
-            android:alpha="0.4"/>
+            android:alpha="0.2"/>
         <ProgressBar
             android:id="@+id/progress_speakers"
             android:layout_width="wrap_content"

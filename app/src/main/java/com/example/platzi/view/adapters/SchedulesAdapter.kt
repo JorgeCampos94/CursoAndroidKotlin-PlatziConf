@@ -14,17 +14,17 @@ import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
 
-class SchedulesAdapter (private val mContext: Context, val scheduleListener : ScheduleListener) : RecyclerView.Adapter<SchedulesAdapter.ViewHolder>(){
+class SchedulesAdapter (val scheduleListener : ScheduleListener) : RecyclerView.Adapter<SchedulesAdapter.ViewHolder>(){
 
     private val listConference = ArrayList<Conferences>()
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_schedule, parent))
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_schedule, parent, false))
 
     override fun getItemCount() = listConference.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val conferenceItem = listConference[position]
-        holder.bind(conferenceItem, mContext , position , scheduleListener)
+        holder.bind(conferenceItem, position , scheduleListener)
     }
 
     fun updateDataConferences(data: List<Conferences>){
@@ -41,7 +41,7 @@ class SchedulesAdapter (private val mContext: Context, val scheduleListener : Sc
         private val tvConferenceTag : TextView = itemView.findViewById(R.id.tv_tag_expositor_item_schedule)
 
         @SuppressLint("SimpleDateFormat")
-        fun bind(conferencesItem: Conferences, mContext: Context, position: Int, scheduleListener: ScheduleListener){
+        fun bind(conferencesItem: Conferences, position: Int, scheduleListener: ScheduleListener){
             tvConferenceName.text = conferencesItem.title
             tvConferenceSpeaker.text = conferencesItem.speakers
             tvConferenceTag.text = conferencesItem.tag

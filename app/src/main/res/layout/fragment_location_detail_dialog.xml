@@ -9,19 +9,10 @@
     android:orientation="vertical"
     tools:context=".view.ui.fragments.locationFragment.LocationDetailDialogFragment">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <Toolbar
-            android:id="@+id/toolbar_location"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-    </com.google.android.material.appbar.AppBarLayout>
-
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dimen_size_activity_72dp">
+        android:layout_marginTop="@dimen/dimen_size_activity_16dp">
 
         <ScrollView
             android:layout_width="match_parent"
