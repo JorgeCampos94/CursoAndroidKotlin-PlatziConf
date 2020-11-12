@@ -38,7 +38,7 @@ class LocationFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerClick
 
         val location = Location()//traemos el Objeto con el contenido del mapa.
         val zoomLocation = 16f//ponemos el zoom con el que se iniciara el mapa.
-        val centerMap = LatLng(location.latitud, location.longitud) //centramos el mapa mediante la funcion LatLng y lo almacenamos en una variable
+        val centerMap = LatLng(location.latitude, location.longitude) //centramos el mapa mediante la funcion LatLng y lo almacenamos en una variable
         val markerOptions = MarkerOptions()
         val bitmapDraw = context?.applicationContext?.let { ContextCompat.getDrawable(it, R.drawable.img_logo_platzi)  } as BitmapDrawable
         val smallMarker = Bitmap.createScaledBitmap(bitmapDraw.bitmap,150,150,false)

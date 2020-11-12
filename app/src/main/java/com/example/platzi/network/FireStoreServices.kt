@@ -9,9 +9,9 @@ import com.google.firebase.firestore.FirebaseFirestoreSettings
 
 class FireStoreServices{
     //Instancia a una conexion directa con la base de datos
-    val firebaseFireStore = FirebaseFirestore.getInstance()
+    private val firebaseFireStore = FirebaseFirestore.getInstance()
     //Obtener nuestros datos y tenerlos o descargarlos  de manera ofLine(modo sin conexion) tener persistencia de datos
-    val settingsFireStore = FirebaseFirestoreSettings.Builder().setPersistenceEnabled(true).build()
+    private val settingsFireStore = FirebaseFirestoreSettings.Builder().setPersistenceEnabled(true).build()
     //Se va a ejecutar cuando se inicie la clase para tener los datos de manera ofLine
     init {
         firebaseFireStore.firestoreSettings = settingsFireStore

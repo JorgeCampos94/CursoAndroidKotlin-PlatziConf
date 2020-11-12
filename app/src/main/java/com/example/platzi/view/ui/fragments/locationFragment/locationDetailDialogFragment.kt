@@ -43,7 +43,7 @@ class LocationDetailDialogFragment : DialogFragment() {
     private fun setContentToolbar() {
         toolbar_location.navigationIcon = view?.context?.let { ContextCompat.getDrawable(it, R.drawable.ic_close) }
         toolbar_location.setTitleTextColor(Color.WHITE)
-        toolbar_location.title = location.nameUbication
+        toolbar_location.title = location.nameLocation
         toolbar_location.setNavigationOnClickListener {
             dismiss()
         }
@@ -52,7 +52,7 @@ class LocationDetailDialogFragment : DialogFragment() {
     private fun setBodyDialogConference() {
         context?.let { mContext ->
             img_platzi_location_detail_dialog.setGlide(mContext, location.photo, false)
-            tv_name_ubication_location_detail_dialog.text = location.nameUbication
+            tv_name_ubication_location_detail_dialog.text = location.nameLocation
             tv_addres_conference_location_detail_dialog.text = location.address
             tv_number_phone_location_detail_dialog.text = location.phone
             tv_website_location_detail_dialog.text = location.website
