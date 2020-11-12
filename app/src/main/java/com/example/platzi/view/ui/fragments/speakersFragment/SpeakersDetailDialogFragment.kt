@@ -54,7 +54,7 @@ class SpeakersDetailDialogFragment : DialogFragment(){
 
     private fun setBodyDialogConference() {
         context?.let {mContext ->
-            img_speaker_speaker_detail_dialog.setGlide(mContext, speakers.image, R.mipmap.ic_launcher)
+            img_speaker_speaker_detail_dialog.setGlide(mContext, speakers.image , true)
             tv_name_speaker_detail_dialog.text = speakers.name
             tv_job_speaker_detail_dialog.text = speakers.jobTitle
             tv_company_speaker_detail_dialog.text = speakers.workPlace

@@ -37,7 +37,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/dimen_size_activity_200dp"
                     android:contentDescription="@string/app_name"
-                    tools:src="@mipmap/ic_launcher"
+                    tools:src="@mipmap/ic_launcher_platzi"
                     android:layout_marginTop="@dimen/dimen_size_activity_16dp"/>
                 <TextView
                     android:id="@+id/tv_name_speaker_detail_dialog"
@@ -71,7 +71,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/dimen_size_activity_40dp"
                     android:contentDescription="@string/app_name"
-                    android:src="@mipmap/ic_launcher"
+                    android:src="@mipmap/ic_launcher_platzi"
                     android:layout_margin="@dimen/dimen_size_activity_8dp"/>
                 <TextView
                     android:id="@+id/tv_description_speaker_detail_dialog"

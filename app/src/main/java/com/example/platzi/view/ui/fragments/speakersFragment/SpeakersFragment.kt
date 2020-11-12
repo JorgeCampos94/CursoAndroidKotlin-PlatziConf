@@ -1,19 +1,16 @@
 package com.example.platzi.view.ui.fragments.speakersFragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.os.bundleOf
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.get
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.platzi.R
 import com.example.platzi.models.Speakers
-import com.example.platzi.utility.setVisibleOrGone
 import com.example.platzi.view.adapters.SpeakersAdapter
 import com.example.platzi.view.adapters.interfaces.SpeakerListener
 import com.example.platzi.viewModel.SpeakersViewModel

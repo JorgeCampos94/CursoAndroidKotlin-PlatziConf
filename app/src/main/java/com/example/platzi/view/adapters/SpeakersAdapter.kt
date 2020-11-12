@@ -38,7 +38,7 @@ class SpeakersAdapter(private val mContext : Context, val speakerListener : Spea
 
         fun bind(speakerItem : Speakers , mContext : Context, position : Int , speakerListener : SpeakerListener){
 
-            imgSpeakerProfile.setGlide(mContext,speakerItem.image.toString(), R.mipmap.ic_launcher)
+            imgSpeakerProfile.setGlide(mContext, speakerItem.image , true)
             tvSpeakerName.text = speakerItem.name
             tvSpeakerDescriptionJob.text = speakerItem.workPlace
 
