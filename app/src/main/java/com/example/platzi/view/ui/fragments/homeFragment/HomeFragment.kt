@@ -37,7 +37,6 @@ class HomeFragment : Fragment() {
             getDataCardList()
             recyclerViewCardHome = viewCardHome?.recyclerView_cards_description_event_home
             adapterCardHome = CardsHomeAdapter(it)
-            Log.w("GGGG","ENTRO")
             listCardHome?.let{listCardHome->
                 adapterCardHome?.setBrandsList(listCardHome)
             }

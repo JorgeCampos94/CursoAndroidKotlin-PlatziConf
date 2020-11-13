@@ -1,7 +1,6 @@
 package com.example.platzi.view.adapters
 
 import android.annotation.SuppressLint
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -18,7 +17,7 @@ class SchedulesAdapter (val scheduleListener : ScheduleListener) : RecyclerView.
 
     private val listConference = ArrayList<Conferences>()
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_schedule, parent, false))
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_schedule_conference, parent, false))
 
     override fun getItemCount() = listConference.size
 

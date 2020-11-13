@@ -1,6 +1,8 @@
 package com.example.platzi.view.ui.fragments.speakersFragment
 
+import android.content.Intent
 import android.graphics.Color
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -58,8 +60,17 @@ class SpeakersDetailDialogFragment : DialogFragment(){
             tv_name_speaker_detail_dialog.text = speakers.name
             tv_job_speaker_detail_dialog.text = speakers.jobTitle
             tv_company_speaker_detail_dialog.text = speakers.workPlace
-            //imgB_twitter_speaker_detail_dialog.setGlide(mContext, speakers.twitter, R.mipmap.ic_launcher)
+            iv_twitter_link_speaker_detail_dialog.setOnClickListener {
+                goToTwitter(speakers.twitter)
+            }
             tv_description_speaker_detail_dialog.text = speakers.biography
         }
+    }
+
+    private fun goToTwitter(nickname: String) {
+        val openURL = Intent(Intent.ACTION_VIEW).apply {
+            data = Uri.parse("https://twitter.com/$nickname")
+        }
+        startActivity(openURL)
     }
 }

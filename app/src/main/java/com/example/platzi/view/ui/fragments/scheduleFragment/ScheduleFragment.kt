@@ -57,7 +57,6 @@ class ScheduleFragment : Fragment(), ScheduleListener {
 
     override fun OnConferencesClick(conferences: Conferences, position: Int) {
         val bundle = bundleOf("conference" to conferences)
-        Log.w("XXXX","$conferences")
         findNavController().navigate(R.id.schedules_detail_fragment_dialog, bundle)
     }
 }
