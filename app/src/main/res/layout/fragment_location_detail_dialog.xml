@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.fragments.locationFragment.LocationDetailDialogFragment">
+    tools:context=".view.ui.fragments.locationFragment.LocationDetailDialogFragment">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -21,7 +21,8 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dimen_size_activity_72dp">
+        android:layout_marginTop="@dimen/dimen_size_activity_16dp"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -41,9 +42,9 @@
                     app:cardElevation="@dimen/dimen_size_activity_4dp">
 
                     <ImageView
+                        android:id="@+id/img_platzi_location_detail_dialog"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:scaleType="centerCrop"
+                        android:layout_height="match_parent"
                         android:src="@drawable/banner_platzi_conf_2"
                         android:contentDescription="@string/app_name"/>
 
@@ -63,7 +64,7 @@
                         android:paddingVertical="@dimen/dimen_size_activity_16dp"
                         android:orientation="vertical">
                         <TextView
-                            android:id="@+id/tv_detail_conference_speaker"
+                            android:id="@+id/tv_name_ubication_location_detail_dialog"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/dimen_size_activity_8dp"
@@ -72,9 +73,9 @@
                             android:gravity="center"
                             android:textStyle="bold"
                             style="@style/TextAppearance.AppCompat.Title"
-                            tools:text="Nombre del Expositor"/>
+                            tools:text="Lugar PlatziConf"/>
                         <TextView
-                            android:id="@+id/tv_detail_location"
+                            android:id="@+id/tv_addres_conference_location_detail_dialog"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/dimen_size_activity_8dp"
@@ -82,7 +83,7 @@
                             android:textStyle="bold"
                             android:gravity="center_vertical"
                             android:textColor="@color/colorPrimary"
-                            tools:text="Titulo de la conferencia"
+                            tools:text="Address"
                             android:drawablePadding="@dimen/dimen_size_activity_16dp"
                             app:drawableStartCompat="@drawable/ic_location"/>
                         <View
@@ -91,7 +92,7 @@
                             android:layout_marginHorizontal="@dimen/dimen_size_activity_8dp"
                             android:background="@color/colorPrimaryDark"/>
                         <TextView
-                            android:id="@+id/tv_detail_number_phone"
+                            android:id="@+id/tv_number_phone_location_detail_dialog"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/dimen_size_activity_8dp"
@@ -108,7 +109,7 @@
                             android:layout_marginHorizontal="@dimen/dimen_size_activity_8dp"
                             android:background="@color/colorPrimaryDark"/>
                         <TextView
-                            android:id="@+id/tv_detail_link"
+                            android:id="@+id/tv_website_location_detail_dialog"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/dimen_size_activity_8dp"

@@ -7,17 +7,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.fragments.scheduleFragment.ScheduleFragment">
+    tools:context=".view.ui.fragments.scheduleFragment.ScheduleFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_schedule"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/item_schedule"/>
+        tools:listitem="@layout/item_schedule_conference"/>
 
     <RelativeLayout
-        android:id="@+id/rl_container_body_schedule"
+        android:id="@+id/rl_container_progress_bar_schedule"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <View
@@ -25,7 +25,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/colorPrimary"
-            android:alpha="0.4"/>
+            android:alpha="0.2"/>
         <ProgressBar
             android:id="@+id/progress_schedule"
             android:layout_width="wrap_content"
