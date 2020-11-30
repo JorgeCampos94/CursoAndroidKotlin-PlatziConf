@@ -1,6 +1,8 @@
 package com.example.platzi.models
 
-class Speakers {
+import java.io.Serializable
+
+class Speakers : Serializable {
     var name = ""
     var jobTitle = ""
     var workPlace = ""

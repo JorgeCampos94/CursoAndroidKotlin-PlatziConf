@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.fragments.scheduleFragment.ScheduleDetailDialogFragment">
+    tools:context=".view.ui.fragments.scheduleFragment.ScheduleDetailDialogFragment">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -21,7 +21,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dimen_size_activity_72dp">
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -32,40 +32,47 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <androidx.cardview.widget.CardView
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/dimen_size_activity_200dp"
-                    android:layout_marginHorizontal="@dimen/dimen_size_text_16sp"
-                    app:cardBackgroundColor="@color/color_white"
-                    app:cardCornerRadius="@dimen/dimen_size_activity_4dp"
-                    app:cardElevation="@dimen/dimen_size_activity_4dp">
+                    android:background="@color/color_white"
+                    android:elevation="@dimen/dimen_size_activity_8dp">
 
-                    <ImageView
+                    <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/banner_platzi_conf_2"
-                        android:contentDescription="@string/app_name"/>
-                    <view
+                        android:layout_height="match_parent"
+                        app:cardBackgroundColor="@color/color_white"
+                        app:cardElevation="@dimen/dimen_size_activity_0dp">
+
+                        <ImageView
+                            android:id="@+id/img_conference_schedule_detail_dialog"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            tools:src="@drawable/banner_platzi_conf_2"
+                            android:contentDescription="@string/app_name"/>
+                    </androidx.cardview.widget.CardView>
+                    <View
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@color/colorPrimary"
-                        android:alpha="0.5"/>
+                        android:alpha="0.4"/>
                     <TextView
+                        android:id="@+id/tv_title_conference_schedule_detail_dialog"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
-                        android:gravity="center"
+                        android:gravity="center_horizontal"
                         android:textSize="@dimen/dimen_size_text_32sp"
                         android:textColor="@color/color_white"
                         android:textStyle="bold"
                         tools:text="Titulo de la conferencia"/>
-                </androidx.cardview.widget.CardView>
+                </RelativeLayout>
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/dimen_size_text_16sp"
+                    android:layout_margin="@dimen/dimen_size_text_8sp"
                     app:cardBackgroundColor="@color/color_white"
                     app:cardCornerRadius="@dimen/dimen_size_activity_4dp"
                     app:cardElevation="@dimen/dimen_size_activity_4dp">
@@ -73,22 +80,23 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/dimen_size_activity_8dp"
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/tv_detail_conference_hour"
+                            android:id="@+id/tv_conference_hour_schedule_detail_dialog"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/dimen_size_activity_8dp"
                             android:textSize="@dimen/dimen_size_text_16sp"
                             android:textColor="@color/colorPrimary"
                             android:gravity="center"
-                            tools:text="Titulo de la conferencia"/>
+                            tools:text="11:00 PM"/>
                         <TextView
-                            android:id="@+id/tv_detail_conference_speaker"
+                            android:id="@+id/tv_speaker_schedule_detail_dialog"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/dimen_size_activity_8dp"
+                            android:layout_marginHorizontal="@dimen/dimen_size_activity_16dp"
                             android:textSize="@dimen/dimen_size_text_18sp"
                             android:textColor="@color/colorPrimary"
                             android:gravity="center"
@@ -96,7 +104,7 @@
                             style="@style/TextAppearance.AppCompat.Title"
                             tools:text="Nombre del Expositor"/>
                         <TextView
-                            android:id="@+id/tv_detail_conference_tag"
+                            android:id="@+id/tv_tag_schedule_detail_dialog"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/dimen_size_activity_8dp"
@@ -112,10 +120,11 @@
                             tools:text="Tag"/>
 
                         <TextView
-                            android:id="@+id/tv_detail_conference_description"
+                            android:id="@+id/tv_detail_conference_schedule_detail_dialog"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/dimen_size_activity_8dp"
+                            android:layout_marginHorizontal="@dimen/dimen_size_activity_16dp"
+                            android:paddingBottom="@dimen/dimen_size_activity_16dp"
                             android:textSize="@dimen/dimen_size_text_16sp"
                             android:textColor="@color/colorPrimary"
                             android:gravity="center"
