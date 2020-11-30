@@ -26,20 +26,53 @@ Este app se construyó usando [CursoAndroidKotlin](https://platzi.com/clases/kot
   
 *******Interfaces de usuario y personalización.
 --
+  10. Creación y ciclo de vida de un Activity
+  11. Creación de Fragments y DialogsFragment
+  12. ConstraintLayout y CoordinatorLayout
+  13. Detallando el layout del Home
+  14. Finalizando el layout del Home
+  15. LinearLayout, RelativeLayout y RecyclerView
+  16. Detalles del RecyclerView
+  17. Diseño de fragmentos con RecyclerView y CardViews
+  18. Terminando los diseños con RecyclerView y CardViews
+  19. Material Design y Material Components
+  20. AppBarLayout, Toolbar y BottomNavigationView
+  21. Personalización de vistas con shapes
 
 *******Android Jetpack
 --
+  22. Android Jetpack y AndroidX
+  23. El componente Navigation
+  24. Finalizando la navegación con Navigation
+ 
+*******Cloud Firestore
+--
+  25. Conectando nuestro proyecto con Firebase
+  26. Crear nuestra base de datos en Cloud Firestore
+  27. Obtener los datos desde Cloud Firestore
 
 *******Android y Kotlin
 --
-
+  28. ViewModel y LiveData
+  29. Creación de adaptador para el RecyclerView
+  30. Detalles en el adaptador
+  31. Revisión del reto adaptador para Speakers
+  32. Carga de datos desde el ViewModel
+  33. Configurando la aplicación para ejecutar en el dispositivo
+  34. Envío y recepción de datos a diálogos
+ 
 *******Biblioteca de Google Maps
 --
+  35. Agregar Google Maps a nuestra app
+  36. Añadir y personalizar un marcador en el mapa
+  37. Colocar estilos e información en un objeto del mapa
 
 *******Detalles de visualización de la app
 --
-
-
+  38. Creación de un SplashScreen
+  39. Configurar estilos para una correcta visualización
+  40. Cierre del Curso
+  
 
 
 
